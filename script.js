@@ -1,4 +1,10 @@
 
+// const frontMessage = document.getElementById('#front-message');
+// const displayQuestions = document.getElementById('#questions');
+// var displayAnswers = document.getElementById('#answers');
+// const btnSubmit = document.getElementById('#submit');
+
+// console.log(displayAnswers);
 
  const questions = [
     {
@@ -29,6 +35,8 @@
     
 
   ];
+
+  console.log(questions);
 
 
 
