@@ -1,47 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <title>Javascript Quizgame </title>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Quiz</title>
 
-  <body>
-   
-<header>
-
-  <div class="highscores">
-<h3>highscores:</h3> <p id="highscores"> </p>
-</div>
-
-<div class="time">
-<p>Time Left:</p> <p id="timer">  </p>
-</div>
-</header>
-
-<div id="front-message">
-
-<h1>Funny Java script quiz</h1>
-
-<p> Test your knowledge on this Javascript quick quiz.</p>
-
-</div>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
 
-<div> 
+  <!-- MY CSS -->
+  <link rel="stylesheet" href="./CSS/jass.css" />
+  <link rel="stylesheet" href="./CSS/style.css" />
 
-  <h1 id="questions"></h1>
+</head>
 
-  <p id="answers"> </p>
+<body>
+  <!-- highscores and timer -->
 
-<button id="submit"> Submit </button>
-</div>
+  <header class="container-fluid mb-5">
 
+    <a id="highscore-link" href="#">View High Scores</a>
+
+    <p id="timer" class="float-right">Time: 0</p>
+  </header>
+
+  <!-- Intro, rules and start button-->
+  <main class="container mb-5">
+
+    <div id="intro" class="row">
+      <div class="col-12 col-md-8 col-lg-6 mx-auto d-block">
+
+        <h1 class="text-center">JavaScript Coding Quiz</h1>
+        <p class="text-justify">
+
+          Test your knowledge with this quick quiz
+          <br>
+          <br>
+          Answer the following 8 questions of JavaScript coding, for each wrong answer 5 seconds will be substracted
+          from the
+          timer which starts at 60 sec.
+        </p>
+
+
+        <button id="start" type="button" class="btn btn-primary mx-auto d-block">
+          Start Quiz
+        </button>
+      </div>
+    </div>
+
+    <!-- Where questions and answers will be shown -->
+    <div id="quiz" class="row">
+      <div class="col-12 col-md-8 col-lg-6 mx-auto d-block">
+
+        <h2 id="question">What is a placeholder question?</h2>
+
+        <button id="ans0" type="button" class="btn btn-primary my-1">
+          answer 1</button><br />
+        <button id="ans1" type="button" class="btn btn-primary my-1">
+          answer 2</button><br />
+        <button id="ans2" type="button" class="btn btn-primary my-1">
+          answer 3</button><br />
+        <button id="ans3" type="button" class="btn btn-primary my-1">
+          answer 4
+        </button>
+        <hr />
+        <p id="feedback"></p>
+        <!-- Last Question  (correct/wrong) -->
+      </div>
+    </div>
+
+    <!-- Score will be displayed  -->
+    
+    <div id="end" class="row">
+      <div class="col-12 col-md-8 col-lg-6 mx-auto d-block">
+
+        <h3>All done!</h3>
+
+        <!-- User Score -->
+
+        <p id="final-score">Your final score is XX.</p>
+
+        <!-- Enter Initials -->
+
+        <form class="form-inline">
+
+          <label for="initials">Enter initials:</label>
+
+          <input type="text" class="form-control mx-1" placeholder="abc" id="initials" />
+
+          <button id="submit-highscore" type="submit" class="btn btn-primary my-1"> Submit </button>
+
+        </form>
+        <hr />
+
+        <p id="last-feedback">last question feedback</p>
+
+      </div>
+    </div>
+
+    <!-- High Scores -->
+
+    <div id="highscores" class="row">
+      <div class="col-12 col-md-8 col-lg-6 mx-auto d-block">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="text-center" colspan="2">High Scores</th>
+            </tr>
+          </thead>
+          <tbody id="high">
+
+            <!-- where high scores go -->
+
+          </tbody>
+        </table>
+        <!-- Go Back/Home Button -->
+
+        <button id="home" type="button" class="btn btn-primary">
+          Go Back
+        </button>
+
+        <!-- Clear High Scores-->
+        <button id="clear" type="button" class="btn btn-danger float-right">
+          Clear High Scores
+        </button>
+      </div>
+    </div>
+  </main>
+
+    <footer> 
+
+<i class="fa-solid fa-user"></i>
+
+<i class="fa-solid fa-check"></i>
+
+<i class="fa-solid fa-circle-xmark"></i>
+
+<i class="fa-solid fa-hourglass-end"></i>
+
+    </footer>
+
+    <!-- JS -->
     <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/3a43da363f.js" crossorigin="anonymous"></script>
   </body>
-  
-
 </html>
